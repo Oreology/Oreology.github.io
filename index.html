@@ -12,7 +12,29 @@
         <style>
             .img {
                 width: 100%;
-                height: 100%;
+                height: 100vh;
+            }
+            .nav-item {
+                list-style-type: none;
+                font-size: 15px;
+            }
+            .nav-item .nav-link:active {
+                color: black;
+            }
+            .nav-item .nav-link:hover {
+                color: black;
+            }
+            .nav-item .nav-link {
+                color: gray;
+            }
+            .carousel-item {
+                height: 100vh;
+                min-height: 300px;
+                background: no-repeat center center scroll;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
             }
             .card-title {
                 font-size: 30px;
@@ -24,9 +46,12 @@
     </head>
 
     <body>
+
         <!-- Top Navigation Bar -->
-        <nav class="navbar navbar-expand-md bg-light navbar-light">
-            <a class="navbar-brand" href="#">Hafidh</a>
+        <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+            <a class="navbar-brand" href="#">Hafidh Satyanto</a>
+
+            <!--
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -43,7 +68,23 @@
                     </li>
                 </ul>
             </div>
+        -->
+
+            <div class="container-fluid d-flex justify-content-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="test.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Photography</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Me</a>
+                    </li>
+
+            </div>
         </nav>
+
 
         <!-- Top Carousel -->
         <div id="carousel" class="carousel slide" data-ride="carousel">
@@ -52,23 +93,20 @@
                 <li data-target="#carousel" data-slide-to="1"></li>
                 <li data-target="#carousel" data-slide-to="2"></li>
             </ul>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="Doge.jpg" alt="Doge" width="100%" height="600">
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active" style="background-image: url('bred.jpg')">
                     <div class="carousel-caption">
                         <h3>Doge</h3>
                         <p>Ok, it is not quite a dog, but a wolf is close enough, right?</p>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="Taylor.jpg" alt="Taylor" width="100%" height="600">
+                <div class="carousel-item" style="background-image: url('nozzle.jpg')">
                     <div class="carousel-caption">
                         <h3>Dubayy</h3>
                         <p>City of dreams. Truly, a sparkling oasis in the desert.</p>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="Ahmed.jpg" alt="Ahmed" width="100%" height="600">
+                <div class="carousel-item" style="background-image: url('lightbearer.jpg')">
                     <div class="carousel-caption">
                         <h3>Dubai City</h3>
                         <p>Halla ya dubayya emarati!</p>
@@ -83,10 +121,13 @@
             </a>
         </div>
 
-        <br>
+
         <!-- Portfolio -->
+
+        <!--
         <div class="container">
             <div class="card-columns">
+
                 <div class="card">
                     <img class="card-img-top" src="Doge.jpg" alt="Doge Image" style="width:100%">
                     <div class="card-body">
@@ -147,6 +188,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="card">
                     <img class="card-img-top" src="Ahmed.jpg" alt="Ahmed Image" style="width:100%">
                     <div class="card-body">
@@ -207,6 +249,7 @@
                             </div>
                     </div>
                 </div>
+
                  <div class="card">
                     <img class="card-img-top" src="Taylor.jpg" alt="Taylor Image" style="width:100%">
                     <div class="card-body">
@@ -215,8 +258,12 @@
                         <a href="#" class="btn btn-primary">Emarat!</a>
                     </div>
                 </div>
+
             </div>
         </div>
+
+    -->
+
     </body>
 
 </html>
