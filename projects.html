@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hafidh - Projects</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+
+        <!-- Top Navigation Bar -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <a class="navbar-brand" href="#">Projects</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Photography</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+
+        <br>
+
+
+        <div class="container">
+            <div class="card-columns">
+
+                <!-- HighJack 1 -->
+                <div class="card">
+                    <img class="card-img-top" src="projects/highjack1/skypic.png" alt="Picture of Sky" style="width:100%">
+                    <div class="card-body">
+                        <h1 class="card-title">HighJack 1</h1>
+                        <p class="card-text">HighJack 1 was the first high-altitude balloon that we launched, as part of the SDState Cubesat Team. It was an initial proof-of-concept and had basic circuitry enclosed in a relatively large styrofoam box, filled with hand warmers and tied to a latex helium balloon.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#highjack1modal">Hello!</a>
+                    </div>
+                    <div class="modal fade" id="highjack1modal">
+                        <div class="modal-dialog modal-xl modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">HighJack 1</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    Modal Body!!!..
+                                    <div id="dubaiCarousel" class="carousel slide" data-ride="carousel">
+                                        <ul class="carousel-indicators">
+                                            <li data-target="#dubaiCarousel" data-slide-to="0" class="active"></li>
+                                            <li data-target="#dubaiCarousel" data-slide-to="1"></li>
+                                            <li data-target="#dubaiCarousel" data-slide-to="2"></li>
+                                        </ul>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="projects/highjack1/flightprofile.png" alt="Taylor" width="100%" height="600">
+                                                <div class="carousel-caption">
+                                                    <h3>Flight Profile</h3>
+                                                    <p>Tracked using a GPS Spot Tracker, we did not have a GPS module at the time.</p>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="projects/highjack1/circuitry.jpg" alt="Ahmed" width="100%" height="600">
+                                                <div class="carousel-caption">
+                                                    <h3>Circuitry</h3>
+                                                    <p>On our first flight we only had 3 sensors - the BME280 Barometric Pressure, Temperature sensor, the MPL3115A2 Altimeter (uses barometric pressure and temperature to estimate altitude), and the LIS3DH 3-axis accelerometer. Python was used to interface with the sensors and everytime the Raspberry Pi was turned on, a new .txt file was made that would record sensor data.</p>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="projects/highjack1/amebuilding.png" alt="Doge" width="100%" height="600">
+                                                <div class="carousel-caption">
+                                                    <h3>Camera View</h3>
+                                                    <p>This was taken a few seconds after launching. SDSU's Campanile and the Architecture, Mathematics & Engineering building can be seen in the background.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-prev" href="#dubaiCarousel" data-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#dubaiCarousel" data-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>
