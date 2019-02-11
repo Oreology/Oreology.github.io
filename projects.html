@@ -8,6 +8,40 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+        <style>
+            .modal-text {
+                font-size: 12px;
+                color: black;
+            }
+            .modal-img {
+                height: 400px;
+                object-fit: contain;
+            }
+            .contain {
+                object-fit: contain;
+            }
+            .nav-item {
+                list-style-type: none;
+                font-size: 15px;
+            }
+            .nav-item .nav-link:active {
+                color: white;
+            }
+            .nav-item .nav-link:hover {
+                color: white;
+            }
+            .nav-item .nav-link {
+                color: gray;
+            }
+            .card-title {
+                font-size: 30px;
+            }
+            .card-text {
+                font-size: 12px;
+            }
+        </style>
+
     </head>
     <body>
 
@@ -47,7 +81,7 @@
                     <div class="card-body">
                         <h1 class="card-title">HighJack 1</h1>
                         <p class="card-text">HighJack 1 was the first high-altitude balloon that we launched, as part of the SDState Cubesat Team. It was an initial proof-of-concept and had basic circuitry enclosed in a relatively large styrofoam box, filled with hand warmers and tied to a latex helium balloon.</p>
-                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#highjack1modal">Hello!</a>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#highjack1modal">Details</a>
                     </div>
                     <div class="modal fade" id="highjack1modal">
                         <div class="modal-dialog modal-xl modal-dialog-centered">
@@ -66,21 +100,21 @@
                                         </ul>
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
-                                                <img src="projects/highjack1/flightprofile.png" alt="Taylor" width="100%" height="600">
+                                                <img class="contain" src="projects/highjack1/flightprofile.png" alt="Taylor" width="100%" height="600">
                                                 <div class="carousel-caption">
                                                     <h3>Flight Profile</h3>
                                                     <p>Tracked using a GPS Spot Tracker, we did not have a GPS module at the time.</p>
                                                 </div>
                                             </div>
                                             <div class="carousel-item">
-                                                <img src="projects/highjack1/circuitry.jpg" alt="Ahmed" width="100%" height="600">
+                                                <img class="contain" src="projects/highjack1/circuitry.jpg" alt="Ahmed" width="100%" height="600">
                                                 <div class="carousel-caption">
                                                     <h3>Circuitry</h3>
                                                     <p>On our first flight we only had 3 sensors - the BME280 Barometric Pressure, Temperature sensor, the MPL3115A2 Altimeter (uses barometric pressure and temperature to estimate altitude), and the LIS3DH 3-axis accelerometer. Python was used to interface with the sensors and everytime the Raspberry Pi was turned on, a new .txt file was made that would record sensor data.</p>
                                                 </div>
                                             </div>
                                             <div class="carousel-item">
-                                                <img src="projects/highjack1/amebuilding.png" alt="Doge" width="100%" height="600">
+                                                <img class="contain" src="projects/highjack1/amebuilding.png" alt="Doge" width="100%" height="600">
                                                 <div class="carousel-caption">
                                                     <h3>Camera View</h3>
                                                     <p>This was taken a few seconds after launching. SDSU's Campanile and the Architecture, Mathematics & Engineering building can be seen in the background.</p>
@@ -99,6 +133,72 @@
                         </div>
                     </div>
                 </div>
+
+
+
+                <!-- HighJack 2 -->
+                <div class="card">
+                    <img class="card-img-top" src="projects/highjack2/expo.png" alt="Picture of Expo" style="width:100%">
+                    <div class="card-body">
+                        <h1 class="card-title">HighJack 2</h1>
+                        <p class="card-text">We launched our second balloon during the Engineering Expo in the Spring semester. The innovations in the second balloon included the first time telemetry data was sent wirelessly to the groundstation using LoRa radio packets, and using an electromechanical valve that would let helium out, as a method of altitude control.</p>
+                        <a href="#" class="btn btn-success" data-toggle="modal" data-target="#highjack2modal">Details</a>
+                        <a href="https://github.com/Oreology/sdstate-cubesat" class="btn btn-info">Source Code</a>
+                    </div>
+                    <div class="modal fade" id="highjack2modal">
+                        <div class="modal-dialog modal-xl modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">HighJack 2</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container-fluid d-flex justify-content-center">
+                                        <img class="modal-img" src="projects/highjack2/expo.png">
+                                    </div>
+                                    <br>
+                                    <p class="modal-text">HighJack 2 was launched during the 2017 Engineering Expo as a large demonstration of the concept of engineering as attendees walked in to the expo - about a group of students working on something for days on end and seeing something come to fruition. We set up an outdoor groundstation (as seen on the far side of the table, with the monitor). This 'groundstation' was essentially a display connected to a Raspberry Pi 3, which was connected to a small LoRa circuit board with a small thumb-sized coil antenna. The output power of the LoRa radio was around 20mW, and with the tiny size of the antenna, range was not spectacular.</p>
+                                    <br>
+                                    <p class="modal-text">One of the hardest and most complicated issue faced was to get the LoRa radio system itself working. The LoRa module used was a "Dragino LoRa/GPS Hat" that had barely any documentation, and the only documentation available online was for a previous version of the Raspberry Pi board.</p>
+                                    <div class="container-fluid d-flex justify-content-center">
+                                        <video height="400" controls> 
+                                            <source src="projects/highjack2/loraprogram.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <br>
+                                    <p class="modal-text">Since the LoRa module was designed to be placed directly on top of the Raspberry Pi pins (but was designed for an older Raspberry Pi!) I had to figure out a compatible wiring solution so that it would work with our newer Pi 3's. Googling of the Raspberry Pi pinouts and some reading on the pins used by the Dragino LoRa/GPS hat were helpful here.</p>
+                                    <br>
+                                    <div class="container-fluid d-flex justify-content-center">
+                                        <video height="400" controls> 
+                                            <source src="projects/highjack2/loramathews.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <br>
+                                    <p class="modal-text">The longest range test that I did was between the university's Crothers Hall and my room in Mathews Hall, which is around 1210 feet or 370 meters apart. I did this test by leaving the balloon's LoRa module in the lab and used the Raspberry Pi's remote desktop feature to control it over WiFi in my room. Therefore, I can control the balloon's Raspberry Pi in my room while physically, the LoRa radio would be separated apart. What's interesting to note is that, this was all done with only around 25mW of power and the small thumb-sized coil antennas, while it had to travel through all the several concrete and glass buildings in the way.</p>
+                                    <br>
+                                    <div class="container-fluid d-flex justify-content-center">
+                                        <img class="modal-img" src="projects/highjack2/balloon.png">
+                                    </div>
+                                    <br>
+                                    <p class="modal-text">Overall, the flight was successful, and the LoRa radio transmission did not cover the entire flight (since its range is limited) but we lost radio telemetry contact only after 4 mins after launch. Although the balloon was rising rapidly, this could be much improved if we had better directional antennas and a higher power output, to increase the range.</p>
+                                    <div class="container-fluid d-flex justify-content-center">
+                                        <img class="modal-img" src="projects/highjack2/flightprofile.png">
+                                    </div>
+                                    <p class="modal-text">Our SPOT tracker does not track altitude and our altimeter sensor measured faulty readings, and so we did not have an accurate picture of the altitude of the balloon during flight. However, judging from the distance of the flight and the 10-minute update locations of the SPOT tracker, we concluded that the altitude control worked - partially.</p>
+                                    <br>
+                                    <div class="container-fluid d-flex justify-content-center">
+                                        <img class="modal-img" src="projects/highjack2/skypic.png">
+                                    </div>
+                                    <br>
+                                    <p class="modal-text">We found that the very small diameter of the valve did not release enough helium when opened, and so were limited in its effectiveness. A successful flight profile with the altitude control system equipped would mean a very slow ascent rate, such that eventually, the rate would be as close to zero as possible and it could - theoretically - stay there for a long time.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
             </div>
         </div>
 
